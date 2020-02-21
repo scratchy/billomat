@@ -1,5 +1,5 @@
 {
-    "name": "phobetor/billomat",
+    "name": "scratchy2/billomat",
     "type": "library",
     "license": "MIT",
     "description": "PHP library for interacting with the Billomat REST API",

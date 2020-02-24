@@ -26,6 +26,7 @@ class ErrorHandlerListener implements EventSubscriberInterface
     const STATUS_NOT_FOUND          = 404;
     const STATUS_TOO_MANY_REQUESTS  = 429;
     const SERVER_DOWN = 503;
+    const SERVER_DOWN_2 = 503;
 
     /**
      * {@inheritDoc}
@@ -94,6 +95,7 @@ class ErrorHandlerListener implements EventSubscriberInterface
                 return new UnauthorizedException($errorName, $statusCode);
             case self::STATUS_TOO_MANY_REQUESTS:
             case self::SERVER_DOWN:
+            case self::SERVER_DOWN_2:
                 $exception = new TooManyRequestsException($errorName, $statusCode);
                 if ($response->hasHeader('X-Rate-Limit-Remaining')) {
                     $exception->setRateLimitRemaining((int)(string)$response->getHeader('X-Rate-Limit-Remaining'));

@@ -26,7 +26,7 @@ class ErrorHandlerListener implements EventSubscriberInterface
     const STATUS_NOT_FOUND          = 404;
     const STATUS_TOO_MANY_REQUESTS  = 429;
     const SERVER_DOWN = 503;
-    const SERVER_DOWN_2 = 503;
+    const SERVER_DOWN_2 = 504;
 
     /**
      * {@inheritDoc}
